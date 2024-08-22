@@ -12,7 +12,10 @@ Stampare il risultato
 */
 
 // # STAGING
-function getRandomNumber() {
+function getRandomNumber(min = 1, max = 5, isMaxIncluded = true) {
+
+    if (isMaxIncluded) max++;
+    return Math.floor(Math.random() * (max - min)) + min;
 
 }
 
